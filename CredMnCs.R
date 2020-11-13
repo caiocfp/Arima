@@ -4,14 +4,8 @@ getwd()
 
 ##pacotes##
 
-library(dplyr)
-library(ggplot2)
-library(tseries)
-library(lmtest)
-library(zoo)
-library(urca)
-library(forecast)
-library(FitAR)
+pacotes <- c("tseries","lmtest","ggplot","zoo","urca","forecast","FitAR")
+lapply(pacotes, library, character.only = T)
 
 
 ##Dados##
@@ -133,8 +127,8 @@ fitCred_2_Fut <- forecast(fitCred_2,
 
 
 plot(fitCred_2_Fut,
-     main = "Concessões de crédito com recursos direcionados
-     - Pessoas físicas - Financiamento imobiliário com taxas reguladas - R$ (milhões)")
+     main = "ConcessÃµes de crÃ©dito com recursos direcionados
+     - Pessoas fÃ­sicas - Financiamento imobiliÃ¡rio com taxas reguladas - R$ (milhÃµes)")
 
 par(mfrow = c(1,1))
 
